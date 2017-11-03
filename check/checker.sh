@@ -23,15 +23,22 @@ TEXT=$2
 TASK_ID=$3
 
 
-cp ../problems/$TASK_ID/input.txt ./input.txt
-cp ../problems/$TASK_ID/output.txt ./sample.txt
+cp ../problems/$TASK_ID/$INPUT_NAME ./$INPUT_NAME
+cp ../problems/$TASK_ID/$OUTPUT_NAME ./sample.txt
+
+text_p="../solutions/$TASK_ID/$TEXT"
 
 if [[ ! -z ${compile[$LANG]} ]] ; then
-	"${!LANG}" ../solutions/$TASK_ID/$TEXT -o runnable
-	./runnable < input.txt  > output.txt 
-	rm runnable
+    if [[ "$LANG" == "JAVA" ]] ; then 
+        cp $text_p ./ 
+        javah $text_p 
+    else
+	    "${!LANG}" $text_p -o runnable
+	    ./runnable < input.txt  > output.txt 
+	    rm runnable
+    fi
 else
-	../solutions/$TASK_ID/$TEXT < input.txt  > output.txt 
+	$text_p < input.txt  > output.txt 
 fi
 
 diff -q sample.txt output.txt
