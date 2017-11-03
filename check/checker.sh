@@ -25,8 +25,12 @@ TASK_ID=$3
 cp ../problems/$TASK_ID/input.txt ./input.txt
 cp ../problems/$TASK_ID/output.txt ./sample.txt
 
-"${!LANG}" ../solutions/$TASK_ID/$TEXT -o runnable
-./runnable < input.txt  > output.txt 
-diff -q sample.txt output.txt
+if [[ ! -z ${compile[$LANG]} ]] ; then
+	"${!LANG}" ../solutions/$TASK_ID/$TEXT -o runnable
+	./runnable < input.txt  > output.txt 
+	rm runnable
+else
+	../solutions/$TASK_ID/$TEXT < input.txt  > output.txt 
+fi
 
-rm runnable
+diff -q sample.txt output.txt
