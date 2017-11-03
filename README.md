@@ -10,6 +10,7 @@ Do this in all languages that you know, and those languages that you do not know
 - Ruby 
 - Java 
 - R
+- Rust
 
 ## Environment:
 
@@ -17,7 +18,9 @@ Do this in all languages that you know, and those languages that you do not know
 - dependencies here if it possible.
 
 ## Dependencies
-- Rust: `curl https://sh.rustup.rs -sSf | sh`
+- Rust: 
+`curl https://sh.rustup.rs -sSf | sh`
+`sudo apt-get install rustc`
 
 
 ## Problems:
