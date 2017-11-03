@@ -1,5 +1,6 @@
 #! /bin/bash
 
+set -e
 source ./config.cfg
 
 if [[ $1 == "-h" ]] ; then
