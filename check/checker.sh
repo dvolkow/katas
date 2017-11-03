@@ -8,8 +8,9 @@ if [[ $1 == "-h" ]] ; then
 	exit 1
 fi
 
-if [[ $# -lt 2 ]] ; then
-	echo "Too less arguments... [lang] [pathtocode]"
+
+if [[ $# -lt 3 ]] ; then
+	echo "Too less arguments... [lang] [pathtocode] [task_id]"
 	echo "Also, you can run it with -h for help."
 	exit 1
 fi
@@ -18,6 +19,14 @@ fi
 LANG=$1
 TEXT=$2
 
-"${!LANG}" $TEXT -o runnable
-./runnable
+TASK_ID=$3
+
+
+cp ../problems/$TASK_ID/input.txt ./input.txt
+cp ../problems/$TASK_ID/output.txt ./sample.txt
+
+"${!LANG}" ../solutions/$TASK_ID/$TEXT -o runnable
+./runnable < input.txt  > output.txt 
+diff -q sample.txt output.txt
+
 rm runnable
