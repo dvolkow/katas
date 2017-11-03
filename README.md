@@ -8,11 +8,17 @@ Do this in all languages that you know, and those languages that you do not know
 - Python 
 - Bash 
 - Ruby 
+- Java 
+- R
 
 ## Environment:
 
 - Ubuntu 16.04
 - dependencies here if it possible.
+
+## Dependencies
+- Rust: `curl https://sh.rustup.rs -sSf | sh`
+
 
 ## Problems:
 
