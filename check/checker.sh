@@ -8,6 +8,7 @@ if [[ $1 == "-h" ]] ; then
 	exit 1
 fi
 
+
 if [[ $# -lt 3 ]] ; then
 	echo "Too less arguments... [lang] [pathtocode] [task_id]"
 	echo "Also, you can run it with -h for help."
@@ -17,6 +18,7 @@ fi
 
 LANG=$1
 TEXT=$2
+
 TASK_ID=$3
 
 
