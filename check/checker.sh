@@ -38,7 +38,12 @@ if [[ ! -z ${compile[$LANG]} ]] ; then
 	    rm runnable
     fi
 else
-	$text_p < input.txt  > output.txt 
+    if [[ -z $LANG ]] ; then
+        command="${!LANG} $text_p"
+        $command < input.txt  > output.txt 
+    else 
+        $text_p < input.txt  > output.txt 
+    fi
 fi
 
 diff -q sample.txt output.txt
