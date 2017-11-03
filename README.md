@@ -3,6 +3,10 @@ Do this in all languages that you know, and those languages that you do not know
 
 ## List of languages:
 
+- Pure C
+- C++
+- Python 
+
 ## Environment:
 
 - Ubuntu 16.04
