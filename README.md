@@ -6,6 +6,8 @@ Do this in all languages that you know, and those languages that you do not know
 - Pure C
 - C++
 - Python 
+- Bash 
+- Ruby 
 
 ## Environment:
 
