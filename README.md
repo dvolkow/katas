@@ -5,13 +5,14 @@ Do this in all languages that you know, and those languages that you do not know
 
 - Pure C
 - C++
-- Python 
-- Bash 
-- Ruby 
-- Java 
+- Python
+- Bash
+- Ruby
+- Java
 - R
 - Rust
 - Perl
+- Haskell
 
 ## Environment:
 
@@ -19,7 +20,7 @@ Do this in all languages that you know, and those languages that you do not know
 - dependencies here if it possible.
 
 ## Dependencies
-- Rust: 
+- Rust:
 `curl https://sh.rustup.rs -sSf | sh`
 `sudo apt-get install rustc`
 
