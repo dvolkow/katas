@@ -1,3 +1,22 @@
-*.swp
-check/*.txt
+# vim files
+.*.swp
+*~
+.*~
 
+# object/binary files
+*.dat
+*.bin
+*.exe
+*.o
+*.so
+a.out
+
+# python bytecode
+*.pyc
+__pycache__*
+
+# java bytecode
+*.class
+
+# test files
+check/*.txt
